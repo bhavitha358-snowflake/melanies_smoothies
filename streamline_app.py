@@ -44,3 +44,8 @@ if ingredients_list:
 
 cnx = st.connection("snowflake")
 session = cnx.session()
+
+# New section to display fruityvice nutrition information
+import requests
+fruityvice_response = requests.get ("https://fruityvice.com/api/fruit/watermelon")
+st. text(fruityvice_response)
